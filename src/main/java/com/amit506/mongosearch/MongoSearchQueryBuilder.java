@@ -1,3 +1,6 @@
+/*
+ * https://github.com/amit506/mongo-search-query-builder
+ */
 package com.amit506.mongosearch;
 
 import com.amit506.mongosearch.enums.AtlasSearchOperator;
@@ -799,7 +802,6 @@ public class MongoSearchQueryBuilder {
   }
 
   public static Document buildDocumentFromSearchCriteria(SearchCriteria c, boolean embedded) {
-  
 
     if (embedded) {
       return buildEmbeddedDocument(c);

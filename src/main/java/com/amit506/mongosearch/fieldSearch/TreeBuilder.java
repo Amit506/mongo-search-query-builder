@@ -1,4 +1,6 @@
-/* Copyright 2024 HT-VCCEdge*/
+/*
+ * https://github.com/amit506/mongo-search-query-builder
+ */
 package com.amit506.mongosearch.fieldSearch;
 
 import java.lang.reflect.Field;
@@ -41,7 +43,8 @@ public class TreeBuilder {
       if (List.class.isAssignableFrom(fieldType)) {
         Class<?> listType = getListGenericType(field);
         if (listType != null) {
-          // Recursively build the tree for list elements if they belong to the target package.
+          // Recursively build the tree for list elements if they belong to the target
+          // package.
           if (isInTargetPackage(listType)) {
             FieldTree childTree = buildTree(listType, field.getName(), true);
             if (childTree != null) {

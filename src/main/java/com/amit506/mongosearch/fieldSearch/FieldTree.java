@@ -1,4 +1,6 @@
-/* Copyright 2024 HT-VCCEdge*/
+/*
+ * https://github.com/amit506/mongo-search-query-builder
+ */
 package com.amit506.mongosearch.fieldSearch;
 
 import com.amit506.mongosearch.Example;

@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.amit506.mongosearch"},{"l":"com.amit506.mongosearch.enums"},{"l":"com.amit506.mongosearch.fieldSearch"},{"l":"com.amit506.mongosearch.tokens"}];updateSearchResults();

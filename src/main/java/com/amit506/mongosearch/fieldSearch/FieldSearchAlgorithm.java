@@ -1,4 +1,6 @@
-/* Copyright 2024 HT-VCCEdge*/
+/*
+ * https://github.com/amit506/mongo-search-query-builder
+ */
 package com.amit506.mongosearch.fieldSearch;
 
 import com.amit506.mongosearch.Constants;
@@ -106,8 +108,8 @@ public class FieldSearchAlgorithm {
         // Remove other children and keep only the matched child
         List<FieldTree> filteredChildren = new ArrayList<>();
         filteredChildren.add(child); // Keep only the matched child
-        node.setChildren(
-            filteredChildren); // Update the parent node's children list with the filteredChildren;
+        node.setChildren(filteredChildren); // Update the parent node's children list with the
+        // filteredChildren;
 
         return Optional.of(node); // Return the updated parent node
       }
@@ -239,7 +241,8 @@ public class FieldSearchAlgorithm {
             .filter(
                 result ->
                     result.getSimilarityScore() >= 0.7
-                        && result.hasChildren()) // Prioritize nodes with children
+                        && result.hasChildren()) // Prioritize nodes with
+            // children
             .max((a, b) -> Double.compare(a.getWeight(), b.getWeight())); // Get the strongest match
 
     if (bestStrongMatchWithChildren.isPresent()) {
@@ -295,7 +298,8 @@ public class FieldSearchAlgorithm {
     for (FieldTree child : root.getChildren()) {
       Optional<FieldTree> result = buildParentChildPath(child, targetId);
       if (result.isPresent()) {
-        // If the target is found in one of the children, build the parent-child relationship
+        // If the target is found in one of the children, build the parent-child
+        // relationship
         FieldTree newRoot = new FieldTree(root.getFieldName(), root.getFieldType(), root.isList());
         newRoot.addChild(result.get()); // Add the found node as a child
         return Optional.of(newRoot);

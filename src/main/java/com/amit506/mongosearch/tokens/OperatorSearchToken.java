@@ -1,3 +1,6 @@
+/*
+ * https://github.com/amit506/mongo-search-query-builder
+ */
 package com.amit506.mongosearch.tokens;
 
 import com.amit506.mongosearch.enums.AtlasSearchOperator;

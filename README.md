@@ -12,27 +12,27 @@ This project provides a simple and flexible way to construct MongoDB queries usi
 To use the Mongo Search Query Builder, follow these steps:
 
 1. **Clone the repository**:
-   ```
-   git clone https://github.com/yourusername/mongo-search-query-builder.git
-   ```
+```
+git clone https://github.com/yourusername/mongo-search-query-builder.git
+```
 
 2. **Navigate to the project directory**:
-   ```
-   cd mongo-search-query-builder
-   ```
+```
+cd mongo-search-query-builder
+```
 
 3. **Build the project using Maven**:
-   ```
-   mvn clean install
-   ```
+```
+mvn clean install
+```
 
 4. **Use the QueryBuilder in your application**:
-   ```java
-   QueryBuilder queryBuilder = new QueryBuilder();
-   SearchCriteria criteria = new SearchCriteria("name", "=", "John Doe");
-   queryBuilder.addCriteria(criteria);
-   String query = queryBuilder.build();
-   ```
+```java
+QueryBuilder queryBuilder = new QueryBuilder();
+SearchCriteria criteria = new SearchCriteria("name", "=", "John Doe");
+queryBuilder.addCriteria(criteria);
+String query = queryBuilder.build();
+```
 
 ## Example
 
