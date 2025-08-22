@@ -26,14 +26,6 @@ cd mongo-search-query-builder
 mvn clean install
 ```
 
-4. **Use the QueryBuilder in your application**:
-```java
-QueryBuilder queryBuilder = new QueryBuilder();
-SearchCriteria criteria = new SearchCriteria("name", "=", "John Doe");
-queryBuilder.addCriteria(criteria);
-String query = queryBuilder.build();
-```
-
 ## Example
 
 Here is an example of how to use the `QueryBuilder` and `SearchCriteria` classes:
